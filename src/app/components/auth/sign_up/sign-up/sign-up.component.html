@@ -1,0 +1,49 @@
+<div class="login-container">
+    <div class="carreau">
+        <h2 mat-dialog-title
+            style="text-align: center;color: rgb(252, 252, 252);font-size: 22px;font-family:sans-serif;position: absolute;right: 180px;bottom: -2px;">
+            Créer un compte</h2>
+    </div>
+
+    <div style="position: absolute;right: 130px;bottom: 366px;left: 100px;">
+        <h3 style="text-align: center;font-family:sans-serif;font-size:15 px;">
+            Créer un compte pour pouvez publier des annonces et contactez les locateurs </h3>
+    </div>
+
+
+    <form [formGroup]="authForm">
+
+        <div class="name">
+            <input class="form-control" type="text" placeholder="Nom" aria-label="default input example"
+                style="background-color:rgb(236, 243, 241);">
+        </div>
+
+
+        <div class="mail">
+
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Email*"
+                style="background-color:rgb(236, 243, 241);">
+        </div>
+
+
+        <div class="pwd">
+            <input type="password" class="form-control" placeholder="mot de passe*" formControlName="password"
+                aria-label="password" aria-describedby="addon-wrapping" style="background-color:rgb(236, 243, 241);">
+        </div>
+
+        <div class="pwd2">
+            <input type="password" class="form-control" placeholder="Confirmer votre mot de passe*"
+                formControlName="password" aria-label="password" aria-describedby="addon-wrapping"
+                style="background-color:rgb(236, 243, 241);">
+        </div>
+
+        <div class="btn2">
+
+            <button type="button" class="btn">Créer</button>
+
+        </div>
+
+
+    </form>
+
+</div>

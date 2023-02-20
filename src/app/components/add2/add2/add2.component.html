@@ -1,0 +1,252 @@
+<form>
+    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor"
+        class="bi bi-chevron-double-right" viewBox="0 0 16 16" id="next">
+        <path fill-rule="evenodd"
+            d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z" />
+        <path fill-rule="evenodd"
+            d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z" />
+    </svg>
+
+    <h2
+        style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;bottom:277px; right: 160px;position: absolute;cursor: pointer;">
+        S U I V A N T
+    </h2>
+
+
+
+    <div>
+        <div class="surface">
+            <p class="local"> Surface</p>
+            <h3 style="position: absolute;right: -60px;bottom: 13px;">(en m2)</h3>
+            <hr style="height:4px;border-width:0;color:rgb(0, 0, 0);background-color:rgb(0, 0, 0);width: 635%;">
+        </div>
+
+        <div>
+            <div class="su">
+                <h2>Surface :</h2>
+            </div>
+            <div class="suu">
+                <input class="form-control" id="border">
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="prix">
+        <p class="local"> Prix</p>
+        <h3 style="position: absolute;right: -70px;bottom: 13px;">(en TND)</h3>
+        <hr style="height:4px;border-width:0;color:rgb(0, 0, 0);background-color:rgb(0, 0, 0);width: 1290%;">
+    </div>
+
+    <div>
+        <div class="pr">
+            <h2>Prix :</h2>
+        </div>
+        <div class="prr">
+            <input class="form-control" id="border">
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="chambre">
+        <h2>chambres :</h2>
+    </div>
+
+    <div style="position:absolute;bottom: 260px;right:0px;">
+        <div style="position:absolute;bottom: 100px;right: 1305px;cursor: pointer;" (click)="zid()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+                <path
+                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z" />
+            </svg>
+        </div>
+
+        <div style="position:absolute;bottom: 100px;right: 1245px;cursor: pointer;" (click)="na9es()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-dash-circle-fill" viewBox="0 0 16 16">
+                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h7a.5.5 0 0 0 0-1h-7z" />
+            </svg>
+
+        </div>
+        <div style="position:absolute;bottom: 80px;right: 1280px;">
+            <h3> {{number}}</h3>
+        </div>
+
+
+    </div>
+
+
+
+
+    <div class="lits">
+        <h2>Lits :</h2>
+    </div>
+
+    <div style="position:absolute;bottom: 260px;right:0px;">
+
+
+        <div style="position:absolute;bottom: 100px;right: 1095px;cursor: pointer;" (click)="zid2()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+                <path
+                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z" />
+            </svg>
+        </div>
+
+        <div style="position:absolute;bottom: 100px;right: 1060px;cursor: pointer;" (click)="na9es2()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-dash-circle-fill" viewBox="0 0 16 16">
+                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h7a.5.5 0 0 0 0-1h-7z" />
+            </svg>
+
+        </div>
+        <div style="position:absolute;bottom: 80px;right: 1081px;">
+            <h3> {{number2}}</h3>
+        </div>
+
+    </div>
+
+
+
+    <div class="sdb">
+        <h2>salles de bains :</h2>
+    </div>
+    <div style="position:absolute;bottom: 260px;right:0px;">
+
+        <div style="position:absolute;bottom: 100px;right: 895px;cursor: pointer;" (click)="zid3()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+                <path
+                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z" />
+            </svg>
+        </div>
+
+        <div style="position:absolute;bottom: 100px;right: 817px;cursor: pointer;" (click)="na9es3()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-dash-circle-fill" viewBox="0 0 16 16">
+                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h7a.5.5 0 0 0 0-1h-7z" />
+            </svg>
+
+        </div>
+        <div style="position:absolute;bottom: 80px;right: 860px;">
+            <h3> {{number3}}</h3>
+        </div>
+
+    </div>
+
+
+
+
+
+    <div class="photo">
+        <p class="local"> Photos et description</p>
+        <hr style="height:4px;border-width:0;color:rgb(0, 0, 0);background-color:rgb(0, 0, 0);width: 240%;">
+    </div>
+
+
+
+    <div class="container">
+        <input type="file" #fileInput (change)="onFileChange($event)" class="upload_hide" id="upload_custom" multiple>
+        <label for="upload_custom" class="upload_label">
+            <i class="fas fa-cloud-upload-alt"></i>
+            <p class="drag_text" *ngIf="!imageUrl">Drag & Drop to Upload</p>
+            <img [src]="imageUrl" *ngIf="imageUrl" />
+            <button class="choose_file">Télécharger image</button>
+            <input type="file" #fileInput (change)="onFileChange($event)" class="upload_hide" id="upload_custom"
+                multiple>
+        </label>
+    </div>
+
+
+
+
+
+    <div class="titre">
+        <label for="exampleFormControlTextarea1" class="form-label">
+            <h3 style="position: absolute;bottom: 20px;">Titre :</h3>
+        </label>
+        <input class="form-control" type="text" placeholder="donner un titre a votre annonce"
+            aria-label="default input example">
+    </div>
+
+
+
+
+
+    <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">
+            <h3 style="position: absolute;bottom: 70px;">Description :</h3>
+        </label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+
+
+
+
+
+
+    <div class="info">
+        <p class="local"> Info</p>
+        <hr style="height:4px;border-width:0;color:rgb(0, 0, 0);background-color:rgb(0, 0, 0);width: 1150%;">
+
+    </div>
+    <h3 style="position: absolute;bottom: -830px;right:790px;">veuillez selectionnez ces options , s'il sont disponible
+        dans votre logement </h3>
+
+
+
+
+    <div class="icons">
+        <!--<i *ngFor="let icon of icons; let i = index" (click)="onIconClick(i)" [style.margin-right.px]="80">
+            <img [src]="icon.src" [class.selected]="icon.selected" />
+            <img *ngIf="icon.selected" class="checkmark" src="assets/icons/checkmark2.png" />
+        </i>
+    -->
+        <i *ngFor="let icon of icons; let i = index" (click)="onIconClick(i)" [ngClass]="{'selected': icon.selected}">
+            <img [src]="icon.src" />
+        </i>
+    </div>
+
+    <div style="cursor: pointer;color: rgb(76, 158, 138);">
+        <h3 style="position: absolute;bottom: -960px;right: 1230px;">machine a laver</h3>
+        <h3 style="position: absolute;bottom: -960px;right: 1100px;">Réfrigérateur</h3>
+        <h3 style="position: absolute;bottom: -960px;right: 980px;">Micro_onde</h3>
+        <h3 style="position: absolute;bottom: -960px;right: 870px;">Vaisselle</h3>
+        <h3 style="position: absolute;bottom: -960px;right: 750px;">Four</h3>
+
+        <h3 style="position: absolute;bottom: -1100px;right: 1250px;">Chauffage</h3>
+        <h3 style="position: absolute;bottom: -1100px;right: 1110px;">Climatiseur</h3>
+        <h3 style="position: absolute;bottom: -1100px;right: 1000px;">Sécurité</h3>
+        <h3 style="position: absolute;bottom: -1100px;right: 890px;">Tv</h3>
+        <h3 style="position: absolute;bottom: -1100px;right: 750px;">Wifi</h3>
+
+        <h3 style="position: absolute;bottom: -1220px;right: 1250px;">Concierge</h3>
+        <h3 style="position: absolute;bottom: -1220px;right: 1120px;">Asenceur</h3>
+        <h3 style="position: absolute;bottom: -1220px;right: 1000px;">Balcon</h3>
+        <h3 style="position: absolute;bottom: -1220px;right: 874px;">Jardin</h3>
+        <h3 style="position: absolute;bottom: -1220px;right: 736px;">Piscine</h3>
+    </div>
+
+
+
+</form>
+
+
+
+
+
+<!--
+<i class=" icon " [ngClass]=" { 'selected' : isIconSelected } " (click)=" onIconClick() "
+    style=" cursor: pointer;position:absolute;right: 50px; ">
+    <img src=" assets/p1.png " />
+</i>
+ -->

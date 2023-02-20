@@ -1,0 +1,11 @@
+<div class="card-container">
+    <div class="card" *ngFor="let house of houses">
+        <img src="{{ house.imageUrl }}" alt="House Image">
+        <div class="card-body">
+            <h5 class="card-title">{{ house.title }}</h5>
+            <p class="card-text">{{ house.description }}</p>
+            <p class="card-text">{{ house.date }}</p>
+            <p class="card-text">{{ house.price }}</p>
+        </div>
+    </div>
+</div>

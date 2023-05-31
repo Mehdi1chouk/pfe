@@ -14,34 +14,47 @@
     <form [formGroup]="authForm">
 
         <div class="name">
-            <input class="form-control" type="text" placeholder="Nom" aria-label="default input example"
-                style="background-color:rgb(236, 243, 241);">
+            <input class="form-control" type="text" placeholder="Nom" style="background-color:rgb(236, 243, 241);"
+                name="nom" formControlName="nom" required>
+
+
+
+
         </div>
 
 
         <div class="mail">
 
             <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Email*"
-                style="background-color:rgb(236, 243, 241);">
+                style="background-color:rgb(236, 243, 241);" name="email" formControlName="email" required>
         </div>
 
 
         <div class="pwd">
-            <input type="password" class="form-control" placeholder="mot de passe*" formControlName="password"
-                aria-label="password" aria-describedby="addon-wrapping" style="background-color:rgb(236, 243, 241);">
+            <input type="password" class="form-control" placeholder="mot de passe*" aria-label="password"
+                aria-describedby="addon-wrapping" style="background-color:rgb(236, 243, 241);" name="password1"
+                formControlName="password1" required>
         </div>
 
         <div class="pwd2">
             <input type="password" class="form-control" placeholder="Confirmer votre mot de passe*"
-                formControlName="password" aria-label="password" aria-describedby="addon-wrapping"
-                style="background-color:rgb(236, 243, 241);">
+                formControlName="password2" aria-label="password" aria-describedby="addon-wrapping"
+                style="background-color:rgb(236, 243, 241);" name="password2" required>
+            <div *ngIf="authForm.get('password2').hasError('passwordMismatch')">
+                Les mots de passe ne correspondent pas.
+            </div>
         </div>
 
         <div class="btn2">
 
-            <button type="button" class="btn">Créer</button>
+            <button type="submit" class="btn" (click)="CreateAccount()"
+                [disabled]="authForm.get('password2').hasError('passwordMismatch')"
+                [disabled]="!authForm.valid">Créer</button>
 
         </div>
+
+        <p class="parg">vous avez un compte , <a (click)="gotologin()" style="color: blue;cursor: pointer;">se
+                connecter</a></p>
 
 
     </form>

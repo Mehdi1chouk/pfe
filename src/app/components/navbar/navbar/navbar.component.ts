@@ -1,29 +1,37 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { MatDialog } from '@angular/material/dialog';
-
-//import { SignUpComponent } from '../../auth/sign_up/sign-up/sign-up.component';
-
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
-
-  constructor(private route: Router, private dialog: MatDialog) { }
-
+  isLoggedIn: boolean = false;
+  constructor(private route: Router) { }
 
   goto_add_announcement() {
-    this.route.navigate(['/Add/Ajouter_annonce'])
+    if (!this.isLoggedIn) {
+      alert('You must be authenticated to add an announcement.');
+    } else {
+      this.route.navigate(['/Add/Ajouter_annonce']);
+    }
   }
-
-
-
   ngOnInit(): void {
+    this.isLoggedIn = localStorage.getItem('loggedIn') === 'true';
   }
-
   auth() {
-    this.route.navigate(['/login'])
+    if (this.isLoggedIn) {
+      // Perform logout operation here
+      this.logout();
+    } else {
+      this.route.navigate(['/login']);
+    }
+  }
+  logout() {
+    // Clear local storage or perform any other necessary logout operations
+    localStorage.clear();
+    this.isLoggedIn = false;
+    // Redirect or perform any other necessary actions after logout
+    this.route.navigateByUrl('');
   }
 }

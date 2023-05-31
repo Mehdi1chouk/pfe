@@ -37,3 +37,17 @@
     right: 250px;
     bottom: 23px;
 }
+
+.btn2 {
+    border-radius: 60px;
+    -webkit-border-radius: 60px;
+    -moz-border-radius: 60px;
+    -ms-border-radius: 60px;
+    -o-border-radius: 60px;
+    position: absolute;
+    right: 600px;
+    bottom: 15px;
+    background-color: #407cf5;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    height: 40px;
+}

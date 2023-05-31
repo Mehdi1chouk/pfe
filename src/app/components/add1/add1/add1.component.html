@@ -1,36 +1,52 @@
-<form>
+<form [formGroup]="form">
     <div class="first">
         <p class="type"> Type</p>
         <hr style="height:4px;border-width:0;color:rgb(0, 0, 0);background-color:rgb(0, 0, 0);width: 940%;">
     </div>
 
-    <div class="radio">
+    <div class="radio" (change)="onRadioChange()">
 
         <div class="form-check">
             <div class="appartement">
-                <input class="form-check-input" type="radio" name="radiogrp">
+                <input class="form-check-input" type="radio" name="selectedtype" value="Appartement"
+                    formControlName="selectedtype">
                 <label class="na">
-                    Apartement
+                    Appartement
                 </label>
             </div>
 
             <div class="maison">
-                <input class="form-check-input" type="radio" name="radiogrp">
+                <input class="form-check-input" type="radio" name="selectedtype" value="Maison"
+                    formControlName="selectedtype">
                 <label class="na">
                     Maison
                 </label>
             </div>
 
-            <div class="bureau">
-                <input class="form-check-input" type="radio" name="radiogrp">
+
+
+
+            <div class="villa">
+                <input class="form-check-input" type="radio" name="selectedtype" value="Villa"
+                    formControlName="selectedtype">
                 <label class="na">
-                    Bureau
+                    Villa
+                </label>
+            </div>
+
+
+            <div class="chambrepartage">
+                <input class="form-check-input" type="radio" name="selectedtype" value="chambre partagé"
+                    formControlName="selectedtype">
+                <label class="na">
+                    Chambre partagé
                 </label>
             </div>
 
 
             <div class="hôtes">
-                <input class="form-check-input" type="radio" name="radiogrp">
+                <input class="form-check-input" type="radio" name="selectedtype" value="maison d'hôte"
+                    formControlName="selectedtype">
                 <label class="na">
                     Maison d'hôtes
                 </label>
@@ -39,27 +55,128 @@
 
         </div>
 
+
+
+        <div style="position: absolute;right:-370px ;top: -30px;">
+            <h2>État :</h2>
+        </div>
+        <div class="nouveau">
+            <input class="form-check-input" type="radio" name="etat" value="nouveau" formControlName="etat">
+            <label class="na">
+                &nbsp; Nouveau
+            </label>
+        </div>
+
+
+        <div class="bonetat">
+            <input class="form-check-input" type="radio" name="etat" value="Bon état" formControlName="etat">
+            <label class="na">
+                &nbsp; Bon état
+            </label>
+        </div>
+
+
+
+
+
+
+        <div style="position: absolute;right:-385px ;top: 60px;">
+            <h2>Étage :</h2>
+        </div>
+
+
+        <div class="etage">
+            <select class="form-select" aria-label="Default select example" formControlName="selectedOption"
+                name="selectedOption" [disabled]="form.get('selectedOption')?.disabled">
+
+                <option value="1ére">1</option>
+                <option value="2éme">2</option>
+                <option value="3éme">3</option>
+                <option value="4éme">4</option>
+                <option value="5éme ou +">5+</option>
+            </select>
+        </div>
+
     </div>
 
 
     <div class="disponibilité">
         <p class="dispo"> Disponibilité</p>
         <hr style="height:4px;border-width:0;color:rgb(0, 0, 0);background-color:rgb(0, 0, 0);width: 400%;">
+
+    </div>
+    <p id="war">veuillez selectionnez les jours ou votre logement <b>n'est pas disponible</b></p>
+
+
+
+
+
+
+
+    <div class="calendar-container">
+
+        <div class="month-navigation">
+            <button (click)="prevMonth()">&lt;</button>
+            <h2 id="month">{{ currentMonth }}</h2>
+            <select formControlName="calendrier" name="calendrier" id="year" [value]="currentYear"
+                (change)="changeYear($event)">
+                <option *ngFor="let year of years" [value]="year" [selected]="year === currentYear">{{ year }}
+                </option>
+            </select>
+            <button id="next" (click)="nextMonth()">&gt;</button>
+        </div>
+
+        <div class="calendar">
+            <div class="weekdays">
+                <div>Sun</div>
+                <div>Mon</div>
+                <div>Tue</div>
+                <div>Wed</div>
+                <div>Thu</div>
+                <div>Fri</div>
+                <div>Sat</div>
+            </div>
+            <div class="days">
+                <div *ngFor="let day of calendarData" [class.other-month]="day < 0" [class.selected]="isSelected(day)"
+                    [ngClass]="{ 'current-day': isCurrentDay(day) }" (click)="selectDay(day)" style="cursor: pointer;">
+                    {{ day !== -1 ? day : '' }}
+                </div>
+
+            </div>
+        </div>
     </div>
 
-    <div class="date">
+    <button (click)="opp()">click</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--   <div class="date">
         <h2 class="dd">De: </h2>
         <div class="de">
-            <input type="date" class="form-control" required id="border">
+            <input type="date" class="form-control" required id="border" formControlName="date1">
         </div>
 
         <h2 class="aa">a: </h2>
 
         <div class="a">
-            <input type="date" class="form-control" required id="border">
+            <input type="date" class="form-control" required id="border" formControlName="date2">
         </div>
 
-    </div>
+    </div>  -->
+
 
 
     <div class="localisation">
@@ -67,108 +184,117 @@
         <hr style="height:4px;border-width:0;color:rgb(0, 0, 0);background-color:rgb(0, 0, 0);width: 420%;">
     </div>
 
+
+
     <div>
         <div class="Région">
             <h2>Région :</h2>
         </div>
-        <div class="reg">
-            <input class="form-control" id="border">
-        </div>
-    </div>
-
-    <div>
-        <div class="ville">
-            <h2>ville :</h2>
-        </div>
-        <div class="vi">
-            <input class="form-control" id="border">
-        </div>
-    </div>
-
-    <div id="map" style="height: 300px; width: 100%;"></div>
-
-    <!--<agm-map [latitude]="latitude" [longitude]="longitude"></agm-map>-->
-
-
-    <!--
-
-
-    <div class="surface">
-        <p class="local"> Surface</p>
-        <h3 style="position: absolute;right: -60px;bottom: 13px;">(en m2)</h3>
-        <hr style="height:4px;border-width:0;color:rgb(0, 0, 0);background-color:rgb(0, 0, 0);width: 635%;">
-    </div>
-
-    <div>
-        <div class="su">
-            <h2>Surface :</h2>
-        </div>
-        <div class="suu">
-            <input class="form-control" id="border">
+        <div class="reg" id="border">
+            <select class="form-select" aria-label="Default select example" formControlName="region">
+                <option value="" selected>region</option>
+                <option *ngFor="let governorate of citiesService.governorates">{{ governorate.name }}</option>
+            </select>
         </div>
     </div>
 
 
 
 
-    <div class="prix">
-        <p class="local"> Prix</p>
-        <h3 style="position: absolute;right: -70px;bottom: 13px;">(en TND)</h3>
-        <hr style="height:4px;border-width:0;color:rgb(0, 0, 0);background-color:rgb(0, 0, 0);width: 1290%;">
+    <div class="ville">
+        <h2>Ville :</h2>
     </div>
-
-    <div>
-        <div class="pr">
-            <h2>Prix :</h2>
-        </div>
-        <div class="prr">
-            <input class="form-control" id="border">
-        </div>
-    </div>
-
-
-
-
-
-
-
-    <div class="photos">
-        <p class="local"> Photos</p>
-        <hr style="height:4px;border-width:0;color:rgb(0, 0, 0);background-color:rgb(0, 0, 0);width: 740%;">
+    <div class="vi" id="border">
+        <select class="form-select" aria-label="Default select example" formControlName="delegation">
+            <option value="" selected>delegation</option>
+            <option *ngFor="let delegation of citiesService.getCitiesByRegion(form.get('region').value)"
+                [value]="delegation">
+                {{ delegation }}
+            </option>
+        </select>
     </div>
 
 
--->
+
+    <div class="quartier">
+        <h2>Quartier :</h2>
+    </div>
+    <div class="qua" id="border">
+        <select class="form-select" aria-label="Default select example" formControlName="localite">
+            <option value="" selected>localite</option>
+            <option *ngFor="let localite of localites" [value]="localite">{{ localite }}</option>
+        </select>
+    </div>
 
 
-    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor"
-        class="bi bi-chevron-double-right" viewBox="0 0 16 16" id="next" (click)="emchi()">
+
+    <div class="code_postal">
+        <h2>CP :</h2>
+    </div>
+    <div class="cp" id="border">
+        <input class="form-control" formControlName="cp">
+    </div>
+
+
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="700" fill="currentColor"
+        class="bi bi-chevron-double-right" viewBox="0 0 16 16" id="next1" (click)="onNext()">
         <path fill-rule="evenodd"
             d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z" />
         <path fill-rule="evenodd"
             d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z" />
     </svg>
 
-    <h2 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;bottom:277px; right: 160px;position: absolute;cursor: pointer;"
-        (click)="emchi()">
+    <h2 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;bottom:240px; right: 105px;position: absolute;cursor: pointer;"
+        (click)="onSubmit()">
         S U I V A N T
     </h2>
+    <div id="map">
+        <input class="form-control" formControlName="localisation">
 
+    </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
 
 
 </form>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+<h2 hidden>aaa</h2>

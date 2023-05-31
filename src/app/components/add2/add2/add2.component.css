@@ -1,4 +1,4 @@
-#next {
+#previous {
     position: relative;
     right: -1330px;
     cursor: pointer;
@@ -172,7 +172,7 @@
 
 .info {
     position: absolute;
-    right: 1290px;
+    right: 1200px;
     bottom: -800px;
 }
 
@@ -217,4 +217,36 @@ img {
     -ms-border-radius: 10%;
     -o-border-radius: 10%;
     cursor: pointer;
+}
+
+.btn {
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    position: absolute;
+    right: 860px;
+    bottom: -1360px;
+    width: 400px;
+    background-color: rgb(71, 166, 211);
+    color: aliceblue;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    height: 50px;
+    font-size: 20px;
+}
+
+.form-control[formControlName="chambre"] {
+    border-color: white !important;
+    /* set border color to default */
+}
+
+.form-control[formControlName="lits"] {
+    border-color: white !important;
+    /* set border color to default */
+}
+
+.form-control[formControlName="sdb"] {
+    border-color: white !important;
+    /* set border color to default */
 }

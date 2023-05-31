@@ -1,0 +1,77 @@
+.calendar-container {
+    width: 300px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.month-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.calendar {
+    margin-top: 10px;
+}
+
+.weekdays {
+    display: flex;
+    justify-content: space-between;
+    background-color: #eee;
+    padding: 5px;
+}
+
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 5px;
+}
+
+.days>div {
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+
+.days>div.other-month {
+    color: #ccc;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+h2 {
+    margin: 0;
+}
+
+.selected {
+    background-color: #e44040;
+    /* Set your desired background color */
+    font-weight: bold;
+    /* Set your desired font weight or any other styles */
+}
+
+#next {
+    position: absolute;
+    left: 150px;
+}
+
+#month {
+    position: absolute;
+    left: 50px;
+}
+
+#year {
+    position: absolute;
+    left: 190px;
+    width: 100px;
+}
+
+.current-day {
+    border: 2px solid red;
+    border-color: #e44040;
+    background-color: aqua;
+    /* Customize the border color or style as desired */
+}

@@ -16,6 +16,19 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { LoginComponent } from './components/auth/login/login/login.component';
 import { SignUpComponent } from './components/auth/sign_up/sign-up/sign-up.component';
+import { FormsModule } from '@angular/forms';
+import { DetailsComponent } from './components/details/details/details.component';
+import { HttpClientModule } from '@angular/common/http';
+import { DataFormService } from './services/data-form.service';
+import * as mapboxgl from 'mapbox-gl';
+import { LeafletModule } from '@asymmetrik/ngx-leaflet';
+import { AgmCoreModule } from '@agm/core';
+import { FiltreComponent } from './components/filtre/filtre/filtre.component';
+import { DatePipe } from '@angular/common';
+import { FiltredHousesComponent } from './components/FiltredHouses/filtred-houses/filtred-houses.component';
+import { UserAccountComponent } from './components/UserAccount/user-account/user-account.component';
+import { AdminDashboardComponent } from './components/Admin_Dashboard/admin-dashboard/admin-dashboard.component';
+
 
 
 
@@ -30,7 +43,13 @@ import { SignUpComponent } from './components/auth/sign_up/sign-up/sign-up.compo
     Add1Component,
     Add2Component,
     LoginComponent,
-    SignUpComponent
+    SignUpComponent,
+    DetailsComponent,
+    FiltreComponent,
+    FiltredHousesComponent,
+    UserAccountComponent,
+    AdminDashboardComponent,
+
 
 
 
@@ -44,10 +63,17 @@ import { SignUpComponent } from './components/auth/sign_up/sign-up/sign-up.compo
     MatButtonModule,
     MatDialogModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    FormsModule,
+    HttpClientModule,
+    LeafletModule,
+
+
+
+
 
   ],
-  providers: [],
+  providers: [DataFormService, DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

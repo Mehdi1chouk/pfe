@@ -1,3 +1,10 @@
+.etage {
+    position: absolute;
+    right: -520px;
+    width: 200px;
+    top: 95px;
+}
+
 .first {
     position: absolute;
     right: 1300px;
@@ -23,13 +30,19 @@
 
 .maison {
     position: absolute;
-    right: 8px;
+    right: 16px;
     bottom: -5px;
 }
 
-.bureau {
+.villa {
     position: absolute;
-    right: -170px;
+    right: 40px;
+    bottom: -40px;
+}
+
+.chambrepartage {
+    position: absolute;
+    right: -253px;
     bottom: 25px;
 }
 
@@ -37,6 +50,18 @@
     position: absolute;
     right: -236px;
     bottom: -7px;
+}
+
+.nouveau {
+    position: absolute;
+    right: -420px;
+    bottom: 2px;
+}
+
+.bonetat {
+    position: absolute;
+    right: -416px;
+    bottom: -25px;
 }
 
 .disponibilité {
@@ -83,7 +108,7 @@
 .localisation {
     position: absolute;
     right: 1200px;
-    bottom: 100px;
+    bottom: -130px;
 }
 
 .local {
@@ -98,14 +123,15 @@
 .Région {
     position: absolute;
     right: 1260px;
-    bottom: 52px;
+    bottom: -180px;
     font-size: 18px;
 }
 
 .reg {
     position: absolute;
-    right: 1040px;
-    bottom: 63px;
+    right: 1060px;
+    bottom: -180px;
+    width: 180px;
 }
 
 #border {
@@ -116,27 +142,48 @@
 .ville {
     position: absolute;
     right: 970px;
-    bottom: 52px;
+    bottom: -180px;
     font-size: 18px;
 }
 
 .vi {
     position: absolute;
-    right: 750px;
-    bottom: 63px;
+    right: 760px;
+    bottom: -180px;
+    width: 190px;
 }
 
-agm-map {
-    height: 400px;
-    width: 50%;
+.quartier {
     position: absolute;
-    bottom: -200px;
-    right: -200px;
+    right: 1260px;
+    bottom: -250px;
+    font-size: 18px;
 }
 
-#next {
+.qua {
+    position: absolute;
+    right: 1060px;
+    bottom: -250px;
+    width: 180px;
+}
+
+.code_postal {
+    position: absolute;
+    right: 970px;
+    bottom: -250px;
+    font-size: 18px;
+}
+
+.cp {
+    position: absolute;
+    right: 760px;
+    bottom: -250px;
+    width: 190px;
+}
+
+#next1 {
     position: relative;
-    right: -1330px;
+    right: -1310px;
     cursor: pointer;
 }
 
@@ -196,3 +243,109 @@ agm-map {
     right: 1270px;
     bottom: -480px;
 }*/
+
+#map {
+    position: absolute;
+    /* bottom: -400px;*/
+    width: 45% !important;
+    height: 600px !important;
+    bottom: -1500px;
+    right: 670px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+#war {
+    position: absolute;
+    bottom: 280px;
+    left: 160px;
+}
+
+.calendar-container {
+    width: 300px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    position: absolute;
+    bottom: -10px;
+    left: 340px;
+    /*background-color: rgb(248, 247, 247);*/
+}
+
+.month-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.calendar {
+    margin-top: 10px;
+}
+
+.weekdays {
+    display: flex;
+    justify-content: space-between;
+    background-color: #eee;
+    padding: 5px;
+}
+
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 5px;
+}
+
+.days>div {
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+
+.days>div.other-month {
+    color: #ccc;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+h2 {
+    margin: 0;
+}
+
+.selected {
+    background-color: #e44040;
+    /* Set your desired background color */
+    font-weight: bold;
+    /* Set your desired font weight or any other styles */
+}
+
+#next {
+    position: absolute;
+    left: 150px;
+}
+
+#month {
+    position: absolute;
+    left: 50px;
+}
+
+#year {
+    position: absolute;
+    left: 190px;
+    width: 100px;
+}
+
+.current-day {
+    background-color: green;
+    color: white;
+}
+
+.disabled-day {
+    text-decoration: line-through;
+    color: #ccc;
+    cursor: not-allowed;
+}

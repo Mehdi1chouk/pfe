@@ -1,0 +1,263 @@
+.carreau1 {
+    position: absolute;
+    bottom: 50px;
+    width: 1400px;
+    height: 590px;
+    background-color: rgb(175, 216, 222);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    right: 60px
+}
+
+.image {
+    position: absolute;
+    bottom: 300px;
+    right: 800px;
+}
+
+.carreau2 {
+    position: absolute;
+    bottom: -270px;
+    width: 700px;
+    height: 250px;
+    background-color: rgb(175, 216, 222);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    right: 750px
+}
+
+.titre {
+    position: absolute;
+    bottom: -90px;
+    /*right: 1200px;*/
+    left: 110px;
+    word-wrap: break-word;
+    white-space: normal;
+    overflow: hidden;
+}
+
+.localisation {
+    position: absolute;
+    bottom: -140px;
+    /* right: 1200px;*/
+    left: 110px;
+    word-wrap: break-word;
+    white-space: normal;
+    overflow: hidden;
+}
+
+.prix {
+    position: absolute;
+    bottom: -210px;
+    /* right: 1250px;*/
+    left: 110px;
+    word-wrap: break-word;
+    white-space: normal;
+    overflow: hidden;
+}
+
+.surface {
+    position: absolute;
+    bottom: -270px;
+    /*right: 1350px;*/
+    left: 110px;
+    word-wrap: break-word;
+    white-space: normal;
+    overflow: hidden;
+}
+
+.carreau3 {
+    position: absolute;
+    bottom: -800px;
+    width: 700px;
+    height: 460px;
+    background-color: rgb(175, 216, 222);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    right: 750px
+}
+
+.chambre {
+    position: absolute;
+    bottom: -900px;
+    right: 1350px;
+}
+
+.lits {
+    position: absolute;
+    bottom: -900px;
+    right: 1280px;
+}
+
+.sdb {
+    position: absolute;
+    bottom: -900px;
+    right: 1120px;
+}
+
+.etat {
+    position: absolute;
+    bottom: -900px;
+    right: 980px;
+}
+
+.etage {
+    position: absolute;
+    bottom: -900px;
+    right: 900px;
+}
+
+.type {
+    position: absolute;
+    bottom: -900px;
+    right: 800px;
+}
+
+.carreau4 {
+    position: absolute;
+    bottom: -1300px;
+    width: 700px;
+    height: 400px;
+    background-color: rgb(175, 216, 222);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    right: 750px
+}
+
+.owner {
+    position: absolute;
+    top: 1900px;
+    right: 200px;
+}
+
+#map {
+    position: absolute;
+    bottom: -400px;
+    width: 42% !important;
+    height: 600px !important;
+    bottom: -620px;
+    right: 60px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.equip {
+    position: absolute;
+    top: 1500px;
+    right: 550px;
+}
+
+.calendar-container {
+    width: 300px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    position: absolute;
+    right: 200px;
+    top: 1500px;
+}
+
+.month-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.calendar {
+    margin-top: 10px;
+}
+
+.weekdays {
+    display: flex;
+    justify-content: space-between;
+    background-color: #eee;
+    padding: 5px;
+}
+
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 5px;
+}
+
+.days>div {
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+
+.days>div.other-month {
+    color: #ccc;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+h2 {
+    margin: 0;
+}
+
+.selected {
+    background-color: #e44040;
+    /* Set your desired background color */
+    font-weight: bold;
+    /* Set your desired font weight or any other styles */
+}
+
+#next {
+    position: absolute;
+    left: 150px;
+}
+
+#month {
+    position: absolute;
+    left: 50px;
+}
+
+#year {
+    position: absolute;
+    left: 190px;
+    width: 100px;
+}
+
+.current-day {
+    border: 2px solid red;
+    border-color: #e44040;
+    background-color: aqua;
+    /* Customize the border color or style as desired */
+}
+
+.past-day.crossed {
+    text-decoration: line-through;
+    color: gray;
+    /* Add any other styles you want for crossed past days */
+}
+
+.crossed {
+    text-decoration: line-through;
+}
+
+.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.selected-day {
+    background-color: green;
+}

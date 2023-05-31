@@ -12,6 +12,7 @@
 .card-container {
     display: flex;
     flex-wrap: wrap;
+    margin-top: 45px;
 }
 
 .card img {
@@ -35,4 +36,40 @@
 .card .card-text {
     font-size: 14px;
     color: gray;
+}
+
+.filter-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.filter-icon {
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+.btn2 {
+    border-radius: 60px;
+    -webkit-border-radius: 60px;
+    -moz-border-radius: 60px;
+    -ms-border-radius: 60px;
+    -o-border-radius: 60px;
+    position: absolute;
+    right: 100px;
+    bottom: 635px;
+    background-color: #407cf5;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    height: 40px;
+    width: 100px;
+}
+
+#favoris {
+    color: red;
 }
